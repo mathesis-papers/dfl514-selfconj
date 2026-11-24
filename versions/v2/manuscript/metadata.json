@@ -1,0 +1,15 @@
+{
+  "id": "dfl514-selfconj",
+  "revision": 2,
+  "problem_ids": ["dfl514-selfconj"],
+  "topic": "Sharp exponent thresholds for Dietz, Flowers and Lockard's self-conjugate conjugate m-ary partition questions",
+  "title": "Sharp thresholds for Dietz, Flowers and Lockard's self-conjugate partition questions: extending Flowers and Lockard's construction",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Using Munagi's residue-class criterion (2008, Theorem 3.1) and extending Flowers and Lockard's construction (2021, Lemma 4.2, p. 467), we answer Questions 5.12–5.14 of Dietz, Flowers and Lockard's A study of m-ary partitions whose conjugates are q-ary (2026, §5, p. 404) in their self-conjugate setting: among conjugate m-ary partitions, the first odd exponent admitting a self-conjugate partition for even m is m+1, the first exponent admitting a non-square self-conjugate partition for any m is m+1, and odd exponents are impossible for odd m. A row-multiplicity identity gives N ≡ H+W−1 modulo (m−1)(q−1) for conjugate (m,q)-ary partitions. For partitions of m^r it yields a positive exponent defect divisible by m−1 whenever the diagram is not rectangular. This proves the exact nonrectangular threshold and, with the credited constructions, classifies all exponents admitting a non-square self-conjugate partition.",
+  "summary": "A nonrectangular CMP of m^r exists exactly for r ≥ m+1. Non-square self-conjugate examples exist exactly for even r ≥ m+1 when m is odd, odd r ≥ m+1 when m is even, or even r ≥ 2m when m is even. A word-counting consequence gives density zero if m^(-1/2)+q^(-1/2)<1, and also for (m,q)=(4,4). The written proofs use a product-modulus identity and credited constructions.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/Combinatorics/Partitions/OddPowerSelfConjugateCMP.lean"
+}

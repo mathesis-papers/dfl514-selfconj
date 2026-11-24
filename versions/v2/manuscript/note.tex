@@ -1,0 +1,359 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{Sharp thresholds for Dietz, Flowers and Lockard's\\self-conjugate partition questions:\\extending Flowers and Lockard's construction}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Using Munagi's residue-class criterion (2008, Theorem~3.1) and extending
+Flowers and Lockard's construction (2021, Lemma~4.2, p.~467),
+we answer Questions~5.12--5.14 of Dietz, Flowers and Lockard's
+\emph{A study of $m$-ary partitions whose conjugates are $q$-ary}
+(2026, \S5, p.~404) in their self-conjugate setting: among conjugate
+$m$-ary partitions, the first odd exponent admitting a self-conjugate
+partition for even $m$ is $m+1$, the first exponent admitting a
+non-square self-conjugate partition for any $m$ is $m+1$, and odd
+exponents are impossible for odd $m$.
+A row-multiplicity identity gives
+$N\equiv H+W-1\pmod{(m-1)(q-1)}$ for conjugate $(m,q)$-ary partitions.
+For partitions of $m^r$ it yields a positive exponent defect divisible
+by $m-1$ whenever the diagram is not rectangular. This proves the exact
+nonrectangular threshold and, with the credited constructions, classifies
+all exponents admitting a non-square self-conjugate partition.
+\end{abstract}
+
+\section{The questions and the congruence}
+Dietz, Flowers and Lockard ask three questions about self-conjugate
+partitions of powers \cite[Questions~5.12--5.14, p.~404]{DFL}.
+The same congruence answers all three in their self-conjugate setting
+and proves the rectangle-only range suggested by Flowers and Lockard
+\cite[\S4, pp.~466--467]{FL}. The earlier papers construct the examples
+at the thresholds using multiplicities and generating operators.
+Here a product-modulus congruence supplies matching lower bounds.
+For even bases it also explains why a non-square example of an even
+power first occurs at exponent $2m$, rather than $m+1$.
+The multiplicity step is Munagi's common-residue criterion
+\cite[Theorem~3.1, p.~2494]{Munagi}, applied separately to the row and
+column moduli. Weighting those multiplicities retains their full product,
+even when the moduli have common factors. When they are coprime,
+the product congruence also follows by combining the two congruences in
+\cite[Lemma~4.1(2)--(3), p.~397]{DFL}.
+
+A partition of a positive integer $N$ is a finite weakly decreasing
+sequence $\lambda=(\lambda_1,\ldots,\lambda_H)$ of positive integers with
+$\sum_i\lambda_i=N$. Its width is $W=\lambda_1$ and its height is $H$.
+Its conjugate has parts
+\[
+ \lambda'_j=\#\{i:\lambda_i\geq j\},\qquad 1\leq j\leq W.
+\]
+This reflects the Ferrers diagram in its main diagonal
+\cite[\S26.9(i)]{DLMF}. The partition is self-conjugate if
+$\lambda'=\lambda$; then $H=W$. A diagram is rectangular if all its rows
+have the same length, and square if it is rectangular with $H=W$.
+For $m\geq2$, a partition is $m$-ary if every part is a nonnegative
+integral power of $m$. A \emph{conjugate $m$-ary partition} (CMP) has both
+$\lambda$ and $\lambda'$ $m$-ary. More generally, a conjugate $(m,q)$-ary
+partition has $m$-ary rows and $q$-ary columns
+\cite[Definitions~1.1--1.2]{DFL}. All bases and exponents below are integers.
+
+\begin{theorem}\label{thm:product}
+Let $m,q\geq2$. Every nonempty conjugate $(m,q)$-ary partition of $N$,
+with width $W$ and height $H$, satisfies
+\begin{equation}\label{eq:product}
+ N\equiv H+W-1\pmod{(m-1)(q-1)}.
+\end{equation}
+For a self-conjugate CMP this gives
+\begin{equation}\label{eq:square}
+ N\equiv 2W-1\pmod{(m-1)^2}.
+\end{equation}
+If $m$ is odd, it also gives $N\equiv1\pmod{2(m-1)}$.
+\end{theorem}
+\begin{proof}
+Let $S$ be the finite set of distinct row lengths, $a_w$ the multiplicity
+of $w\in S$, and $c_j=\#\{i:\lambda_i\geq j\}$ for $1\leq j\leq W$,
+with $c_{W+1}=0$. Then $a_w=c_w-c_{w+1}$,
+$H=\sum_{w\in S}a_w$ and $N=\sum_{w\in S}a_ww$.
+Every $w\in S$ is a power of $m$, so $m-1\mid w-1$.
+If $w<W$, both $c_w$ and $c_{w+1}$ are positive powers of $q$;
+therefore $q-1\mid a_w$. At $w=W$, $a_W=c_W$ is a power of $q$,
+so $q-1\mid a_W-1$. Put $\varepsilon_W=1$ and
+$\varepsilon_w=0$ for $w<W$. Each summand in
+\[
+ \sum_{w\in S}(a_w-\varepsilon_w)(w-1)
+ =N-H-W+1
+\]
+is divisible by $(m-1)(q-1)$, proving \eqref{eq:product}.
+Self-conjugacy gives $H=W$ and hence \eqref{eq:square}.
+For odd $m$, put $d=m-1$. Since $d$ is even, $2d\mid d^2$;
+also $d\mid W-1$ because $W$ is a power of $m$.
+Thus $N-1=(N-2W+1)+2(W-1)$ is divisible by $2d$.
+\end{proof}
+
+\section{The first nonrectangular partition of a power}
+\begin{corollary}\label{cor:defect}
+Let a nonrectangular CMP of $m^r$, $m\geq2$, have width $m^a$
+and height $m^b$. Then
+\[
+ 1\leq a+b-r\leq r-2,\qquad m-1\mid a+b-r.
+\]
+In particular $r\geq m+1$. If it is self-conjugate, $a=b$ and
+\begin{equation}\label{eq:defect}
+ 1\leq 2a-r\leq r-2,\qquad m-1\mid 2a-r.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Write $d=m-1$. The binomial theorem gives
+$m^j=(1+d)^j\equiv1+jd\pmod{d^2}$ for every $j\geq0$.
+Theorem~\ref{thm:product} implies $d^2\mid d(r-a-b)$, hence
+$d\mid a+b-r$, including $d=1$.
+Nonrectangularity gives $m^r<m^{a+b}$.
+The first row and column give $m^r\geq m^a+m^b-1$.
+A nonrectangular diagram has $a,b\geq1$, so
+$m^r>\max(m^a,m^b)$ and $a,b\leq r-1$.
+These bounds give the two inequalities. A positive multiple of $d$
+is at least $d$, so $d\leq r-2$.
+\end{proof}
+
+\begin{corollary}\label{cor:rectangles}
+A nonrectangular CMP of $m^r$, for $m\geq2$ and $r\geq0$, exists
+exactly when $r\geq m+1$. If $C_m(N)$ counts the CMPs of $N$, then
+\[
+ C_m(m^r)=r+1\quad(0\leq r\leq m),\qquad
+ C_m(m^r)>r+1\quad(r\geq m+1).
+\]
+The smallest non-square self-conjugate CMP of a power of $m$ has size
+$m^{m+1}$.
+\end{corollary}
+\begin{proof}
+Corollary~\ref{cor:defect} gives the lower bound.
+For attainment, Flowers and Lockard's partition
+\cite[Lemma~4.2, p.~467]{FL} has one row of length $m^m$, and
+$m^j-m^{j-1}$ rows of length $m^{m-j}$ for $1\leq j\leq m$.
+The number of rows of length at least $m^{m-j}$ is $m^j$.
+Thus conjugation gives the same parts and multiplicities. Its size is
+\[
+ m^m+\sum_{j=1}^m(m^j-m^{j-1})m^{m-j}
+ =m^m+m(m-1)m^{m-1}=m^{m+1}.
+\]
+It is non-square and self-conjugate.
+Multiplying each row length by $m^t$ repeats each conjugate part
+$m^t$ times, preserving the CMP property and nonrectangularity;
+the size becomes $m^{m+1+t}$.
+The rectangular CMPs of $m^r$ are exactly $m^{r-j}$ rows of length
+$m^j$, $0\leq j\leq r$. These $r+1$ rectangles are all distinct.
+Finally, a self-conjugate rectangle is a square.
+\end{proof}
+
+\section{Self-conjugate powers and sharp parity thresholds}
+\begin{corollary}\label{cor:negative}
+For every odd $m\geq3$ and every $s\geq0$, no self-conjugate CMP of
+$m^{2s+1}$ exists. A self-conjugate CMP of $m^r$, $r\geq0$, exists
+if and only if $r$ is even.
+\end{corollary}
+\begin{proof}
+Set $d=m-1$. Since $m+1$ is even, $m^2\equiv1\pmod{2d}$, so
+$m^{2s+1}\equiv m\pmod{2d}$. Theorem~\ref{thm:product} would instead
+give $m^{2s+1}\equiv1\pmod{2d}$, requiring $2d\mid d$, which is
+impossible for $d>0$. If $r=2k$, the square with $m^k$ rows of
+length $m^k$ supplies existence, including $(1)$ for $k=0$.
+This square construction is recalled in
+\cite[Discussion~5.11, p.~404]{DFL}.
+\end{proof}
+For the subfamily $m\equiv3\pmod4$, nonexistence also follows from the
+earlier odd-parts restriction implicit in Munagi's generating function
+\cite[Theorem~5.2, p.~2500]{Munagi}: every exponent in
+$1+\sum_{n\geq0}x^{(2n+1)^2}/\prod_{j=1}^{2n+1}(1-x^{4j})$
+is zero or $1\pmod4$. Somos records the corresponding size restriction
+in his dated OEIS comment \cite{OEIS}; Andrews subsequently studies
+the same class \cite[\S3, Lemma~3.1]{Andrews}.
+The modulus $2(m-1)$ in Theorem~\ref{thm:product} excludes all odd bases,
+including $m\equiv1\pmod4$.
+
+\begin{corollary}\label{cor:classification}
+A non-square self-conjugate CMP of $m^r$, $m\geq2$, $r\geq0$, exists
+exactly in these cases:
+\[
+\begin{array}{c|c}
+\text{base and exponent parity}&\text{necessary and sufficient range}\\\hline
+m\text{ odd},\ r\text{ even}&r\geq m+1\\
+m\text{ even},\ r\text{ odd}&r\geq m+1\\
+m\text{ even},\ r\text{ even}&r\geq2m.
+\end{array}
+\]
+For odd $m$ and odd $r$ none exists. Allowing squares, a self-conjugate
+CMP exists precisely when $r$ is even or when $m$ is even and $r\geq m+1$.
+\end{corollary}
+\begin{proof}
+Corollary~\ref{cor:defect} gives $r\geq m+1$, and
+Corollary~\ref{cor:negative} excludes odd $m,r$.
+If $m,r$ are both even, $2a-r$ in \eqref{eq:defect} is even and
+divisible by the odd integer $m-1$. Hence $2a-r\geq2(m-1)$ and
+$r\geq2m$.
+
+Corollary~\ref{cor:rectangles} attains $m+1$. For even $m$, Dietz,
+Flowers and Lockard construct non-square self-conjugate CMPs of
+$m^{2m}$ \cite[Corollaries~5.7--5.10, pp.~403--404]{DFL}; a direct
+description follows. Replacing each cell by an $m\times m$ square
+preserves self-conjugacy, non-square shape and the CMP property,
+and increases $r$ by two \cite[Theorem~5.4, p.~469]{FL}.
+These starting exponents attain every range in the table.
+Squares supply every even exponent, including zero.
+\end{proof}
+
+Here is the construction from \cite[Corollary~5.9, p.~404]{DFL}
+in diagram terms. For a self-conjugate CMP of width $W$, let $U$
+replace one largest row $W$ by $mW$ and append $(m-1)W$ rows of
+length one. This adds equal arms to the first row and column,
+preserving self-conjugacy and the CMP property, and takes
+$(W,N)$ to $(mW,N+2(m-1)W)$.
+Let $T$ replace each cell by an $m\times m$ square, taking
+$(W,N)$ to $(mW,m^2N)$. Composition acts from right to left.
+Starting with the partition $(1)$, set
+$\lambda_j=(U^2T^2)^jU^2T(1)$ for $j\geq0$.
+Its width and size are
+\[
+ W_j=m^{4j+3},\qquad
+ N_j=2(j+1)m^{4j+3}+m^{4j+2}-2(j+1)m^{4j+1}.
+\]
+The case $j=0$ follows by applying $T$ and then $U$ twice.
+The recurrences $W_{j+1}=m^4W_j$ and
+$N_{j+1}=m^4N_j+2(m^2-1)m^2W_j$ give the formulas by induction.
+For even $m$, set $j=(m-2)/2$. The last two terms cancel and
+$N_j=m^{2m}$. Each diagram is non-square because its last $U$
+creates distinct largest and smallest row lengths.
+
+\section{A density consequence for mixed bases}
+The general density question in \cite[Question~4.9, p.~400]{DFL}
+also has a short partial answer from the size bounds for its operators.
+\begin{corollary}\label{cor:density}
+Let $A_{m,q}(X)$ count the positive integers at most $X$ having a
+conjugate $(m,q)$-ary partition. If
+$m^{-1/2}+q^{-1/2}<1$, then $A_{m,q}(X)/X\to0$ as $X\to\infty$.
+The same conclusion holds for $(m,q)=(4,4)$.
+\end{corollary}
+\begin{proof}
+By \cite[Theorem~2.7 and Corollary~2.9]{DFL}, every such partition
+has a unique generating word with $a$ migration and $b$ raise operators;
+its width and height are $m^a$ and $q^b$.
+A diagram of size at most $X$ has $m^a,q^b\leq X$.
+Choose $0<\sigma<1/2$ with $m^{-\sigma}+q^{-\sigma}<1$.
+Since $1\leq X^{2\sigma}m^{-\sigma a}q^{-\sigma b}$,
+the number of eligible generating words is at most
+\[
+ X^{2\sigma}\sum_{a,b\geq0}\binom{a+b}{a}
+ m^{-\sigma a}q^{-\sigma b}
+ =\frac{X^{2\sigma}}{1-m^{-\sigma}-q^{-\sigma}}=o(X).
+\]
+This also bounds $A_{m,q}(X)$.
+For $m=q=4$, put $L=\lfloor\log_4X\rfloor$; then $a,b\leq L$.
+Pascal's identity, summed twice, gives
+\[
+ A_{4,4}(X)\leq\sum_{a,b=0}^L\binom{a+b}{a}
+ =\binom{2L+2}{L+1}-1
+ \leq\frac{4^{L+1}}{\sqrt{L+2}}.
+\]
+For the last bound use
+$\binom{2n}{n}/4^n=\prod_{j=1}^n(1-1/(2j))
+\leq\exp(-\tfrac12\sum_{j=1}^n1/j)\leq(n+1)^{-1/2}$.
+Since $X\geq4^L$, division by $X$ proves the claim.
+\end{proof}
+
+\section{Source coverage and mathematical verification}
+Question~5.13 says ``smallest non-square CMP'' without repeating
+``self-conjugate''. In its section's self-conjugate setting the answer
+is yes. Without that setting a non-square rectangle such as $(m)$
+already partitions $m$, so the unrestricted reading has answer no.
+Corollary~\ref{cor:rectangles} also establishes minimality among all
+\emph{nonrectangular} CMPs, without assuming self-conjugacy.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.32\linewidth}p{0.61\linewidth}@{}}
+\toprule
+Source item & Coverage\\\midrule
+\cite{DFL}, Question 5.12, p.~404 & Answered: yes. The first odd
+exponent for even $m$ is $m+1$ (Corollary~\ref{cor:classification}).\\[3pt]
+\cite{DFL}, Question 5.13, p.~404 & Answered: yes in the self-conjugate
+setting; first non-square exponent $m+1$ (Corollary~\ref{cor:rectangles}).\\[3pt]
+\cite{DFL}, Question 5.14, p.~404 & Answered: no
+(Corollary~\ref{cor:negative}).\\[3pt]
+\cite{DFL}, Discussion 5.11; Corollaries 5.7--5.10 & Prior constructions
+cited: Dietz--Flowers--Lockard, 2026; Corollary 5.9 reproved above.
+Sharp parity thresholds: Corollary~\ref{cor:classification}; the full
+families and their counts are not covered.\\[3pt]
+\cite{DFL}, Lemma 4.1, pp.~397--398 & Complemented by the product-modulus
+congruence of Theorem~\ref{thm:product}.\\[3pt]
+\cite{FL}, Lemma 4.2, p.~467; Theorem 5.4, p.~469 & Reproved; prior
+proof Flowers--Lockard, 2021. Constructions used in
+Corollaries~\ref{cor:rectangles} and~\ref{cor:classification}.\\[3pt]
+\cite{FL}, rectangle-only observation, pp.~466--467 & Proved:
+$C_m(m^r)=r+1$ for $0\leq r\leq m$ (Corollary~\ref{cor:rectangles}).\\[3pt]
+\cite{Munagi}, Theorems 3.1 and 5.2 & Prior criterion and generating
+function cited: Munagi, 2008. The latter already gives the
+$m\equiv3\pmod4$ subcase of the odd-power obstruction.\\[3pt]
+\cite{DFL}, Question 4.9, p.~400 & Partially answered: density zero
+under Corollary~\ref{cor:density}'s hypotheses. Other pairs and exact
+existence/counting are not covered.\\[3pt]
+\cite{DFL}, Example 4.7, p.~399 & Not covered: the listed unresolved
+power-uniqueness questions.\\\bottomrule
+\end{tabular}
+\end{center}
+The other generating-operator, polynomial and counting results in the
+two source papers are outside the scope of this note.
+
+The congruences, threshold bounds and existence classifications have
+written proofs above, with the earlier constructions credited separately.
+The Lean declaration
+\begin{quote}\small\ttfamily
+D5.S3.Combinatorics.Partitions.\\
+OddPowerSelfConjugateCMP.result
+\end{quote}
+in the \href{https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/Combinatorics/Partitions/OddPowerSelfConjugateCMP.lean}{pinned nonexistence source}
+proves precisely the first statement of Corollary~\ref{cor:negative}:
+for every odd $m\geq2$ and $s\geq0$, a finite Young diagram of size
+$m^{2s+1}$ with $m$-ary rows and columns is not equal to its transpose.
+The mixed-base extension, minimality results, existence classifications
+and density bound are covered by the written arguments.
+In the \href{https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S1/Words/Compositions/StrictFirstSumsGapfreeOddParts.lean}{pinned structural helper source},
+\texttt{rowLen\_zero} and \texttt{height\_bounds} give zero rows beyond
+the height and bounds for positive column lengths. They support the
+formal nonexistence proof, not the added threshold statements.
+The accompanying \texttt{verify.py} checks exact congruences and
+transposes over bounded finite sets and checks the constructions using
+compressed multiplicities. Its output specifies all finite ranges;
+these checks supplement the written proofs.
+
+\begin{thebibliography}{9}
+\bibitem{DFL} G.~D. Dietz, T.~B. Flowers and S.~R. Lockard,
+\emph{A study of $m$-ary partitions whose conjugates are $q$-ary},
+J. Algebra Comb. Discrete Struct. Appl. \textbf{13}(3) (2026), 385--407.
+\href{https://doi.org/10.13069/jacodesmath.v13i3.393}{doi:10.13069/jacodesmath.v13i3.393}.
+\bibitem{FL} T.~B. Flowers and S.~R. Lockard,
+\emph{Conjugate $m$-ary partitions}, Australas. J. Combin.
+\textbf{81}(3) (2021), 458--473.
+\url{https://ajc.maths.uq.edu.au/pdf/81/ajc_v81_p458.pdf}.
+\bibitem{Munagi} A.~O. Munagi, \emph{Pairing conjugate partitions by
+residue classes}, Discrete Math. \textbf{308}(12) (2008), 2492--2501.
+\href{https://doi.org/10.1016/j.disc.2007.05.022}{doi:10.1016/j.disc.2007.05.022}.
+\bibitem{OEIS} OEIS Foundation Inc., \emph{A067357: Number of
+self-conjugate partitions of $4n+1$ into odd parts},
+comment by M.~Somos dated 25 July 2015.
+\url{https://oeis.org/A067357}. Accessed 18 November 2026.
+\bibitem{Andrews} G.~E. Andrews, \emph{The Bhargava-Adiga Summation
+and Partitions}, J. Indian Math. Soc. \textbf{84}(3--4) (2017), 151--160.
+\href{https://doi.org/10.18311/jims/2017/15836}{doi:10.18311/jims/2017/15836}.
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions,
+\S26.9(i), \emph{Integer partitions: restricted number and part size---Definitions}.
+\url{https://dlmf.nist.gov/26.9#i}. Accessed 18 November 2026.
+\end{thebibliography}
+\medskip
+\noindent\small \copyright\ 2026 Haobo Ma and Wenlin Zhang.
+This work is licensed under the Creative Commons Attribution 4.0
+International license (CC BY 4.0).
+\end{document}

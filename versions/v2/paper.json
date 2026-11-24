@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 82404,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "79f35a702bf7a1084eebe0a3e5a38335bb097f7ba73d57c01d2c176826a3ae6b",
+      "sha256": "79f35a702bf7a1084eebe0a3e5a38335bb097f7ba73d57c01d2c176826a3ae6b"
+    },
+    "source": {
+      "bytes": 15051,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "a04ff2d6e162186cecffa7a103f06be013360103a375b316f0afc460cd399bcc",
+      "sha256": "a04ff2d6e162186cecffa7a103f06be013360103a375b316f0afc460cd399bcc"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Using Munagi's residue-class criterion (2008, Theorem 3.1) and extending Flowers and Lockard's construction (2021, Lemma 4.2, p. 467), we answer Questions 5.12–5.14 of Dietz, Flowers and Lockard's A study of m-ary partitions whose conjugates are q-ary (2026, §5, p. 404) in their self-conjugate setting: among conjugate m-ary partitions, the first odd exponent admitting a self-conjugate partition for even m is m+1, the first exponent admitting a non-square self-conjugate partition for any m is m+1, and odd exponents are impossible for odd m. A row-multiplicity identity gives N ≡ H+W−1 modulo (m−1)(q−1) for conjugate (m,q)-ary partitions. For partitions of m^r it yields a positive exponent defect divisible by m−1 whenever the diagram is not rectangular. This proves the exact nonrectangular threshold and, with the credited constructions, classifies all exponents admitting a non-square self-conjugate partition.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/Combinatorics/Partitions/OddPowerSelfConjugateCMP.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 82404,
+      "sha256": "79f35a702bf7a1084eebe0a3e5a38335bb097f7ba73d57c01d2c176826a3ae6b",
+      "url": "/api/v1/collected-papers/dfl514-selfconj/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T02:58:36.002103243Z",
+    "record": "dfl514-selfconj",
+    "repository_name": "dfl514-selfconj",
+    "source": {
+      "bytes": 15051,
+      "sha256": "a04ff2d6e162186cecffa7a103f06be013360103a375b316f0afc460cd399bcc",
+      "url": "/api/v1/collected-papers/dfl514-selfconj/files/source?version=2"
+    },
+    "title": "Sharp thresholds for Dietz, Flowers and Lockard's self-conjugate partition questions: extending Flowers and Lockard's construction",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T02:58:36.002103243Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "dfl514-selfconj"
+  }
+}
