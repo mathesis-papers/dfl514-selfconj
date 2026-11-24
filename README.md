@@ -5,13 +5,15 @@
 Using Munagi's residue-class criterion (2008, Theorem 3.1) and extending Flowers and Lockard's construction (2021, Lemma 4.2, p. 467), we answer Questions 5.12–5.14 of Dietz, Flowers and Lockard's A study of m-ary partitions whose conjugates are q-ary (2026, §5, p. 404) in their self-conjugate setting: among conjugate m-ary partitions, the first odd exponent admitting a self-conjugate partition for even m is m+1, the first exponent admitting a non-square self-conjugate partition for any m is m+1, and odd exponents are impossible for odd m. A row-multiplicity identity gives N ≡ H+W−1 modulo (m−1)(q−1) for conjugate (m,q)-ary partitions. For partitions of m^r it yields a positive exponent defect divisible by m−1 whenever the diagram is not rectangular. This proves the exact nonrectangular threshold and, with the credited constructions, classifies all exponents admitting a non-square self-conjugate partition.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24488525](https://doi.org/10.5281/zenodo.24488525)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24488524](https://doi.org/10.5281/zenodo.24488524)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [dfl514-selfconj](https://mathesis-omega-research.apps.chrono-ai.fun/papers/dfl514-selfconj?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Sharp thresholds for Dietz, Flowers and Lockard's self-conjugate partition questions: extending Flowers and Lockard's construction. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/dfl514-selfconj?version=2
+Haobo Ma, Wenlin Zhang (2026). Sharp thresholds for Dietz, Flowers and Lockard's self-conjugate partition questions: extending Flowers and Lockard's construction. Mathesis, version 2. https://doi.org/10.5281/zenodo.24488525
 
 ## Statement progress
 
